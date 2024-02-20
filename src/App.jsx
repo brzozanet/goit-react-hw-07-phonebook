@@ -14,12 +14,8 @@ export const App = () => {
 
   // const { contacts, isLoading, error } = useSelector(fetchContacts);
 
-  console.log(dispatch);
-  console.log(isLoading);
-  console.log(error);
-
   useEffect(() => {
-    dispatch(getContacts());
+    dispatch(getContacts);
   }, [dispatch]);
 
   return (

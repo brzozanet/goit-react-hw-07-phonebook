@@ -1,11 +1,11 @@
 import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
-import {
-  fetchingInProgress,
-  fetchingSuccess,
-  fetchingError,
-} from "./contactsSlice";
+// import {
+//   fetchingInProgress,
+//   fetchingSuccess,
+//   fetchingError,
+// } from "./contactsSlice";
 
 axios.defaults.baseURL = "https://65d1f7f4987977636bfbbb88.mockapi.io/";
 
@@ -25,12 +25,11 @@ axios.defaults.baseURL = "https://65d1f7f4987977636bfbbb88.mockapi.io/";
 export const fetchContacts = createAsyncThunk(
   "contacts/fetch",
   async (_, thunkAPI) => {
-    // NOTE: WTF???
     try {
       const response = await axios.get("/contacts");
       return response.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.message); // NOTE: WTF???
+      return thunkAPI.rejectWithValue(error.message);
     }
   }
 );

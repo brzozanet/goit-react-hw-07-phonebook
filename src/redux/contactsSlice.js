@@ -83,7 +83,6 @@ const contactsSlice = createSlice({
     error: null,
   },
   extraReducers: (builder) => {
-    // NOTE: WTF???
     builder
       .addCase(fetchContacts.pending, (state, action) => {
         state.isLoading = true;
