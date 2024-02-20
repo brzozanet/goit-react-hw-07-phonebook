@@ -13,7 +13,7 @@ export const App = () => {
   const error = useSelector(getError);
 
   useEffect(() => {
-    dispatch(getContacts);
+    dispatch(fetchContacts());
   }, [dispatch]);
 
   return (

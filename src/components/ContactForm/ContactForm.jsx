@@ -10,7 +10,7 @@ export const ContactForm = () => {
     const name = event.target[0].value;
     const phone = event.target[1].value;
 
-    const alreadyExistingContact = contacts.find(
+    const alreadyExistingContact = contacts.contacts.find(
       (contact) => contact.name.toLowerCase() === name.toLowerCase()
     );
 
