@@ -4,13 +4,17 @@ import { useEffect } from "react";
 import { ContactForm } from "./components/ContactForm/ContactForm";
 import { Filter } from "./components/Filter/Filter";
 import { ContactList } from "./components/ContactList/ContactList";
-import { getContacts, getError, getIsLoading } from "./redux/selectors";
+import {
+  selectContacts,
+  selectError,
+  selectIsLoading,
+} from "./redux/selectors";
 import css from "./App.module.css";
 
 export const App = () => {
   const dispatch = useDispatch();
-  const isLoading = useSelector(getIsLoading);
-  const error = useSelector(getError);
+  const isLoading = useSelector(selectIsLoading);
+  const error = useSelector(selectError);
 
   useEffect(() => {
     dispatch(fetchContacts());
