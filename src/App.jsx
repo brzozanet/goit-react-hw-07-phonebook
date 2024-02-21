@@ -4,11 +4,7 @@ import { useEffect } from "react";
 import { ContactForm } from "./components/ContactForm/ContactForm";
 import { Filter } from "./components/Filter/Filter";
 import { ContactList } from "./components/ContactList/ContactList";
-import {
-  selectContacts,
-  selectError,
-  selectIsLoading,
-} from "./redux/selectors";
+import { selectError, selectIsLoading } from "./redux/selectors";
 import css from "./App.module.css";
 
 export const App = () => {
