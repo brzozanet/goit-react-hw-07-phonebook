@@ -15,7 +15,7 @@ export const ContactForm = () => {
     );
 
     if (!alreadyExistingContact) {
-      dispatch(addContact(name, phone));
+      dispatch(addContact({ name, phone }));
     } else {
       alert(`Contact ${name} already existing in Phonebook.`);
     }
